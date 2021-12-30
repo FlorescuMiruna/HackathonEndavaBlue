@@ -17,126 +17,89 @@
   body {
     margin: 0;
   }
-  
+
 .navbar {
-    z-index: 2000 !important;
-    width: 100%;
-     top: -200px;
-    padding: 0;
-    position: fixed;
-    -webkit-transition: top 0.3s ease-in-out;
-    transition: top 0.3s ease-in-out;
-    background-color: #7fb9af !important;
-    text-align: left;
-  }
-  
-  .navbar .container-fluid {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  
-  .navbar #logo {
-    height: 3em;
-    margin: 0;
-  }
-  
-  .navbar .navbar-brand {
-    font-weight: 600;
-    margin: 0;
-  }
-  
-  .navbar .profile-details:hover {
-    background-color: #6DA098;
-  }
-  
-  .navbar .profile-details {
-    cursor: pointer;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    padding-right: 2em;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-  }
-  
-  .navbar .profile-details #profile-pic {
-    width: 4em;
-  }
-  
-  .navbar .profile-details .name-email {
-    color: white;
-    padding-top: 1em;
-  }
-  
-  .navbar .profile-details .name-email #ac-name {
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 0;
-  }
-  
-  .navbar .profile-details #toggle-profile {
-    margin-bottom: 1.5em;
-  }
-  
-  .navbar .nav-item a {
-    color: white !important;
-    font-weight: 500;
-  }
-  
-  .navbar .nav-item :hover {
-    color: black !important;
-    -webkit-transition: .5s;
-    transition: .5s;
-  }
-  
-  .navbar .me-2 {
-    height: 2.4em;
-    width: 16em;
-    border-radius: 2em;
-    outline: none !important;
-  }
-  
-  .navbar .dropdown-menu {
-    -webkit-box-shadow: var(--shadow-var);
-            box-shadow: var(--shadow-var);
-    border-radius: .6em;
-  }
-  
-  .navbar .dropdown-menu a {
-    color: #4e4d4d !important;
-  }
-  
-  .navbar .dropdown-menu .dropdown-item:hover {
-    color: var(--main-color) !important;
-  }
-  
-  .navbar .btn {
-    font-weight: 500;
-    margin-right: 1em;
-    width: 5em;
-    height: 2.4em;
-    border-radius: 2em;
-    border: 1.8px solid white;
-    color: white;
-    text-align: center;
-    outline: none;
-  }
-  
-  .navbar .btn:hover {
-    color: var(--main-color);
-    background-color: white;
-    outline: none;
-  }
-  
-  .navbar .navbar-toggler {
-    border: none;
-    outline: none !important;
-  }
-  
-  .navbar .nav-link {
-    color: #fff !important;
-  }
+  background-color: var(--main-color) ;
+}
+
+.navbar .navbar-brand {
+  font-weight: 600;
+}
+
+.navbar .nav-item a {
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar .nav-item :hover {
+  color: wheat !important;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.navbar .me-2 {
+  height: 2.4em;
+  width: 16em;
+  border-radius: 2em;
+  outline: none !important;
+}
+
+.navbar .dropdown-menu {
+  -webkit-box-shadow: var(--shadow-var);
+  box-shadow: var(--shadow-var);
+  border-radius: .6em;
+}
+
+.navbar .dropdown-menu a {
+  color: #4e4d4d !important;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  /*color: var(--main-color) !important;*/
+}
+
+#logo{
+  filter: invert(56%) sepia(27%) saturate(641%) hue-rotate(119deg) brightness(89%) contrast(88%);
+}
+
+#favourites{
+  filter: invert(100%) !important;
+}
+#search{
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(97%) contrast(103%) !important;
+}
+
+
+.navbar .btn {
+  margin-right: 1em;
+  width: 5em;
+  height: 2.4em;
+  text-align: center;
+  border-radius: 2em;
+  border: 1.8px solid white;
+  color: white;
+  font-weight: 500;
+  outline: none;
+}
+
+.navbar .btn:hover {
+  background-color: white;
+  /*color: var(--main-color);*/
+  outline: none;
+}
+
+.navbar .navbar-toggler {
+  border: none;
+  outline: none !important;
+}
+
+.navbar .navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+}
 
   #background{
     /* z-index: -1; */
@@ -150,28 +113,27 @@
 }
 .textbox h1{
   font-size: 4vh;
-  color: white;
+  color: black;
   margin-left: 3vw;
   margin-top: 2vh;
 }
 .textbox p{
   margin-top: 8vh;
   font-family: Roboto;
-font-style: normal;
-margin-left: 3vw;
-font-size: 3vh;
-line-height: 47px;
-
-color: #FFFFFF;
+  font-style: normal;
+  margin-left: 3vw;
+  font-size: 3vh;
+  line-height: 47px;
+  color: black;
 
 }
   #circle-new{
-    height: 120%;
+    height: 70em;
     z-index: -1;
-    width: 65%;
+    width: 65em;
     /* top | right | bottom | left */
-  margin: -60vh -5vw ;
-  position: absolute !important;
+    margin: -60vh -5vw ;
+    position: absolute !important;
     cursor: pointer !important;
     object-fit: cover;
     border-radius: 100%;

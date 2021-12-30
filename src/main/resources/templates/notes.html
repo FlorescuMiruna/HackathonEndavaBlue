@@ -14,44 +14,37 @@
     <link rel="stylesheet" href="/style/home.css">
     <link rel="stylesheet" href="/style/notes.css">
     <link rel="stylesheet" href="/style/btn-flip.css">
-     <script src="/scripts/carousel.js"></script>
+<!--     <script src="/scripts/carousel.js"></script>-->
+     <script src="/scripts/navbar.js"></script>
     <title>Notes</title>
 </head>
 <body id="mybody">
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/home"><img src="/media/logo-2.svg" alt="" id="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/html/profile.html">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/html/calendar.html">Calendar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/notes">Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/deadlines">Deadlines</a>
-                </li>
-            </ul>
-            <div class="flip">
-                <a href="#" target="_blank">
-                    <div class="front">SIGN IN</div>
-                    <div class="back">SIGN IN</div>
-                </a>
-            </div>
+<nav class="navbar navbar-light bg-light justify-content-between sticky-top" id="navbar">
+    <div class="nav-left">
+        <a id="home-text" class="nav-item" href="/home">Home</a>
+        <a id="profile-text" class="nav-item" href="#">Profile</a>
+        <a id="calendar-text" class="nav-item" href="#">Calendar</a>
+        <a id="courses-text" class="nav-item" href="#">Courses</a>
+        <a id="deadlines-text" class="nav-item" href="/deadlines">Deadlines</a>
+        <a id="diginotes-text" class="nav-item" href="/notes">Digital Notes</a>
+    </div>
+    <div class="nav-center">
+        <a href="/home"><img src="/images/logo-2.svg" id="logo"></a>
+    </div>
+    <div class="nav-right">
 
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" id="btnSignIn">Sign in</a>
+            <a href="#" id="btnSignOut" onclick="signOut()" data-bs-toggle="modal"
+               data-bs-target="#exampleModal2">Sign out</a>
+            <a href="#" id="btnAbout">About us</a>
+            <a href="#" id="btnContact">Contact</a>
         </div>
+        <img src="/images/favorites.svg" id="favourites" class="nav-item">
+        <img src="/images/search.svg" id="search" class="nav-item">
+
+        <img src="/images/nav_prod.svg" id="hamburger" onclick="openNav()">
     </div>
 </nav>
     
@@ -78,7 +71,16 @@
             <div id='camera'> <img src="/media/camera.png"></div>
         </div>
     </div>
-<script src='/scripts/notes.js'>
+<!--<script src='/scripts/notes.js'>-->
+<!--</script>-->
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "200px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
 </script>
 </body>
 </html>
