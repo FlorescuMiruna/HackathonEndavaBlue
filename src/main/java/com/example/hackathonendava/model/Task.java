@@ -1,6 +1,8 @@
 package com.example.hackathonendava.model;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -18,6 +20,7 @@ public class Task {
     private String description;
 
     @Column(name = "deadline")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate deadline;
 
     @Column(name = "stage")

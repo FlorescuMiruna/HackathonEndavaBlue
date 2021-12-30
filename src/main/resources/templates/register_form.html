@@ -3,16 +3,26 @@
 <head>
 	<meta charset="ISO-8859-1">
 	<title>Sign Up - CodeJava</title>
-	<link rel="stylesheet" href="style/register_style.css" type="text/css" >
+	<link rel="stylesheet" href="style\register_style.css" type="text/css" >
 </head>
 <body>
-<div>
-	<div>
-		<h1>User Registration</h1>
-	</div>
+<div class="main">
 	<form th:action="@{/process_register}" th:object="${user}"
 		  method="post">
+		<figure aria-hidden="true">
+			<div class="person-body"></div>
+			<div class="neck skin"></div>
+			<div class="head skin">
+				<div class="eyes"></div>
+				<div class="mouth"></div>
+			</div>
+			<div class="hair"></div>
+			<div class="ears"></div>
+			<div class="shirt-1"></div>
+			<div class="shirt-2"></div>
+		</figure>
 		<div class="m-3">
+
 			<div class="form-group row">
 				<label class="col-4 col-form-label">E-mail: </label>
 				<div class="col-8">
@@ -48,7 +58,11 @@
 				<button type="submit" class="btn btn-primary">Sign Up</button>
 			</div>
 		</div>
+
 	</form>
+
 </div>
+
+
 </body>
 </html>

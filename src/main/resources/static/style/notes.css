@@ -1,0 +1,240 @@
+:root {
+    --main-color:#4E6686;
+    --secondary-color: #FCE3AF;
+    --shadow-var: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --my-red-color: #E36D6D;
+    --green-message: #BBE5B0;
+  }
+  
+  * {
+    margin-right: 0px;
+  }
+  
+  * a {
+    text-decoration: none;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+.navbar {
+    z-index: 2000 !important;
+    width: 100%;
+     top: -200px;
+    padding: 0;
+    position: fixed;
+    -webkit-transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out;
+    background-color: #7fb9af !important;
+    text-align: left;
+  }
+  
+  .navbar .container-fluid {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .navbar #logo {
+    height: 3em;
+    margin: 0;
+  }
+  
+  .navbar .navbar-brand {
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .navbar .profile-details:hover {
+    background-color: #6DA098;
+  }
+  
+  .navbar .profile-details {
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    padding-right: 2em;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  
+  .navbar .profile-details #profile-pic {
+    width: 4em;
+  }
+  
+  .navbar .profile-details .name-email {
+    color: white;
+    padding-top: 1em;
+  }
+  
+  .navbar .profile-details .name-email #ac-name {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  
+  .navbar .profile-details #toggle-profile {
+    margin-bottom: 1.5em;
+  }
+  
+  .navbar .nav-item a {
+    color: white !important;
+    font-weight: 500;
+  }
+  
+  .navbar .nav-item :hover {
+    color: black !important;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  
+  .navbar .me-2 {
+    height: 2.4em;
+    width: 16em;
+    border-radius: 2em;
+    outline: none !important;
+  }
+  
+  .navbar .dropdown-menu {
+    -webkit-box-shadow: var(--shadow-var);
+            box-shadow: var(--shadow-var);
+    border-radius: .6em;
+  }
+  
+  .navbar .dropdown-menu a {
+    color: #4e4d4d !important;
+  }
+  
+  .navbar .dropdown-menu .dropdown-item:hover {
+    color: var(--main-color) !important;
+  }
+  
+  .navbar .btn {
+    font-weight: 500;
+    margin-right: 1em;
+    width: 5em;
+    height: 2.4em;
+    border-radius: 2em;
+    border: 1.8px solid white;
+    color: white;
+    text-align: center;
+    outline: none;
+  }
+  
+  .navbar .btn:hover {
+    color: var(--main-color);
+    background-color: white;
+    outline: none;
+  }
+  
+  .navbar .navbar-toggler {
+    border: none;
+    outline: none !important;
+  }
+  
+  .navbar .nav-link {
+    color: #fff !important;
+  }
+
+  #background{
+    /* z-index: -1; */
+    border-radius: 50% 50%;
+  }
+.textbox{
+  z-index: 3;
+  align-items: baseline;
+  width: 50vw;
+  margin-top: 20vh;
+}
+.textbox h1{
+  font-size: 4vh;
+  color: white;
+  margin-left: 3vw;
+  margin-top: 2vh;
+}
+.textbox p{
+  margin-top: 8vh;
+  font-family: Roboto;
+font-style: normal;
+margin-left: 3vw;
+font-size: 3vh;
+line-height: 47px;
+
+color: #FFFFFF;
+
+}
+  #circle-new{
+    height: 120%;
+    z-index: -1;
+    width: 65%;
+    /* top | right | bottom | left */
+  margin: -60vh -5vw ;
+  position: absolute !important;
+    cursor: pointer !important;
+    object-fit: cover;
+    border-radius: 100%;
+    filter: brightness(70%);
+  }
+
+  input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    display: inline-block;
+    padding: 0.5vh 1vw;
+    width: 40vw;
+    cursor: pointer;
+    height: 7vh;
+    margin-left: 3vw;
+    border: 3px dashed #FFFFFF;
+border-radius: 30px;
+}
+#arrow{
+  transform: translate(15px, 20px);
+}
+#paper{
+  margin-left: -5vw;
+}
+#preview{
+  position: absolute;
+width: 30vw;
+height: 70vh;
+right: 1vw;
+top: 20vh;
+background: #F0F0F0;
+}
+#preview p{
+  position: absolute;
+  font-family: Roboto;
+font-style: italic;
+font-weight: normal;
+font-size: 3vh;
+line-height: 47px;
+transform: translate(0, -6vh);
+color: #544F4F;
+}
+#export{
+  position: absolute;
+width: 818px;
+height: 96px;
+top: 80vh;
+margin-left: 3vw;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 3vh;
+line-height: 47px;
+color: #544F4F;
+
+}
+
+#camera img{
+  position: absolute;
+width: 300px;
+height: 250px;
+left: 0px;
+top: 90vh;
+;
+}

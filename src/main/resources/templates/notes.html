@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/notes.css">
+    <link rel="stylesheet" href="/style/btn-flip.css">
+     <script src="/scripts/carousel.js"></script>
+    <title>Notes</title>
+</head>
+<body id="mybody">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/home"><img src="/media/logo-2.svg" alt="" id="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/calendar.html">Calendar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/notes">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/deadlines">Deadlines</a>
+                </li>
+            </ul>
+            <div class="flip">
+                <a href="#" target="_blank">
+                    <div class="front">SIGN IN</div>
+                    <div class="back">SIGN IN</div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+    
+    <div class="main-container"> 
+        <div class="new-side col-sm-3 col-md-3">
+            <div id="background">
+                <img src="/media/notes.jpg" id="circle-new">
+                <div class="textbox" id="textbox">
+                    <h1> Transform every piece of handwriting into digital editable notes</h1>
+                    <p>1. Upload here any photo from your computer.</p>
+                </div>
+                <div>
+               
+                <label for="file-upload" class="custom-file-upload">
+                    <svg width="20" height="30" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id='paper' d="M59.25 61.25V19.6875L37.3125 0H10.5C7.91414 0 5.43419 0.921872 3.60571 2.56282C1.77723 4.20376 0.75 6.42936 0.75 8.75V61.25C0.75 63.5706 1.77723 65.7962 3.60571 67.4372C5.43419 69.0781 7.91414 70 10.5 70H49.5C52.0859 70 54.5658 69.0781 56.3943 67.4372C58.2228 65.7962 59.25 63.5706 59.25 61.25ZM37.3125 13.125C37.3125 14.8655 38.0829 16.5347 39.4543 17.7654C40.8256 18.9961 42.6856 19.6875 44.625 19.6875H54.375V61.25C54.375 62.4103 53.8614 63.5231 52.9471 64.3436C52.0329 65.1641 50.7929 65.625 49.5 65.625H10.5C9.20707 65.625 7.96709 65.1641 7.05285 64.3436C6.13861 63.5231 5.625 62.4103 5.625 61.25V8.75C5.625 7.58968 6.13861 6.47688 7.05285 5.65641C7.96709 4.83594 9.20707 4.375 10.5 4.375H37.3125V13.125Z" fill="white"/>       
+                        <path id='arrow' d="M15.4377 24.3125C15.4377 24.8927 15.1808 25.4491 14.7237 25.8593C14.2666 26.2695 13.6466 26.5 13.0002 26.5C12.3537 26.5 11.7337 26.2695 11.2766 25.8593C10.8195 25.4491 10.5627 24.8927 10.5627 24.3125V7.71813L4.9759 12.7363C4.5182 13.147 3.89743 13.3778 3.25015 13.3778C2.60287 13.3778 1.9821 13.147 1.5244 12.7363C1.0667 12.3255 0.80957 11.7684 0.80957 11.1875C0.80957 10.6066 1.0667 10.0495 1.5244 9.63875L11.2744 0.888753C11.5008 0.685039 11.7698 0.523413 12.0659 0.413135C12.3621 0.302857 12.6795 0.246094 13.0002 0.246094C13.3208 0.246094 13.6382 0.302857 13.9344 0.413135C14.2305 0.523413 14.4995 0.685039 14.7259 0.888753L24.4759 9.63875C24.9336 10.0495 25.1907 10.6066 25.1907 11.1875C25.1907 11.7684 24.9336 12.3255 24.4759 12.7363C24.0182 13.147 23.3974 13.3778 22.7502 13.3778C22.1029 13.3778 21.4821 13.147 21.0244 12.7363L15.4377 7.71813V24.3125Z" fill="white"/>
+                    </svg>
+                </label>
+                <input id="file-upload" type="file"/></div>
+            </div>
+            <div id='preview'><p>Preview:</p></div>
+            <div id='export'>2. Select the type of file you want to export.</div>
+            <div id='camera'> <img src="/media/camera.png"></div>
+        </div>
+    </div>
+<script src='/scripts/notes.js'>
+</script>
+</body>
+</html>

@@ -26,12 +26,12 @@ public class TaskExceptionHandler {
         return new ErrorTask(baseException.getErrorCode(), baseException.getMessage(), HttpStatus.NOT_FOUND.value());
     }
 
-    @ExceptionHandler
-    @ResponseStatus(value=HttpStatus.INTERNAL_SERVER_ERROR)
-    public ErrorTask handleException(Exception exception){
-        logger.error("An error occured", exception);
-
-        return new ErrorTask("internal.server.error", "An error occured",HttpStatus.INTERNAL_SERVER_ERROR.value());
-    }
+//    @ExceptionHandler
+//    @ResponseStatus(value=HttpStatus.INTERNAL_SERVER_ERROR)
+//    public ErrorTask handleException(Exception exception){
+//        logger.error("An error occured", exception);
+//
+//        return new ErrorTask("internal.server.error", "An error occured",HttpStatus.INTERNAL_SERVER_ERROR.value());
+//    }
 }
 

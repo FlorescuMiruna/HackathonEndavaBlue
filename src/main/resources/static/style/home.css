@@ -1,0 +1,410 @@
+:root {
+  --main-color:#4E6686;
+  --secondary-color: #FCE3AF;
+  --shadow-var: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --my-red-color: #E36D6D;
+  --green-message: #BBE5B0;
+}
+
+* {
+  margin-right: 0px;
+}
+
+* a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  z-index: 2000 !important;
+  width: 100%;
+  top: -200px;
+  padding: 0;
+  position: fixed;
+  -webkit-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
+  background-color: #7fb9af !important;
+}
+
+.navbar #logo {
+  height: 3em;
+  padding-left: 1em;
+}
+
+.navbar .navbar-brand {
+  font-weight: 600;
+}
+
+.navbar .nav-item a {
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar .nav-item :hover {
+  color: black !important;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.navbar .flip {
+  right: 2em;
+}
+
+.navbar .flip .back {
+  border-radius: 2em !important;
+  height: 3.1em;
+}
+
+.navbar .flip .front {
+  border-radius: 2em !important;
+  background-color: #1d1e20;
+  height: 3em;
+}
+
+.navbar .me-2 {
+  height: 2.4em;
+  width: 16em;
+  border-radius: 2em;
+  outline: none !important;
+}
+
+.navbar .dropdown-menu {
+  -webkit-box-shadow: var(--shadow-var);
+          box-shadow: var(--shadow-var);
+  border-radius: .6em;
+}
+
+.navbar .dropdown-menu a {
+  color: #4e4d4d !important;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  color: var(--main-color) !important;
+}
+
+.navbar .btn {
+  font-weight: 500;
+  margin-right: 1em;
+  width: 5em;
+  height: 2.4em;
+  border-radius: 2em;
+  border: 1.8px solid white;
+  color: white;
+  text-align: center;
+  outline: none;
+}
+
+.navbar .btn:hover {
+  color: var(--main-color);
+  background-color: white;
+  outline: none;
+}
+
+.navbar .navbar-toggler {
+  border: none;
+  outline: none !important;
+}
+
+.navbar .navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+}
+
+.main-container {
+  height: 200vh;
+  width: 100% !important;
+}
+
+.main-container .carousel {
+  text-align: center;
+}
+
+.main-container .carousel video {
+  width: 100%;
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+}
+
+.deadlines {
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+
+.deadlines #deadlines-title {
+  padding: 1em 0 0em 1.5em;
+  margin-bottom: .1em;
+  width: 100%;
+}
+
+.deadlines .img-deadlines {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+  top: 0;
+  left: 0;
+  z-index: 100 !important;
+  width: 100% !important;
+  height: 220px;
+}
+
+.deadlines .tutorial-deadlines {
+  padding: 0;
+  position: relative;
+}
+
+.deadlines .tutorial-deadlines .step {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em 0 0 2em;
+}
+
+.deadlines .tutorial-deadlines .step h1 {
+  z-index: 100;
+  font-size: 68px;
+  margin-right: .5em;
+}
+
+.deadlines .tutorial-deadlines .step h2 {
+  z-index: 100;
+  margin-top: .6em;
+  font-size: 18px;
+}
+
+.deadlines .tutorial-deadlines .step h2 span {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.deadlines .tutorial-deadlines #step3 {
+  color: black;
+}
+
+.deadlines .calendar-side {
+  padding-left: 0;
+}
+
+.deadlines .calendar-side .card {
+  height: 13.8em;
+  margin-left: 2em;
+  -webkit-box-shadow: var(--shadow-var);
+          box-shadow: var(--shadow-var);
+}
+
+.deadlines .calendar-side .card-header {
+  background-color: var(--my-red-color);
+  text-align: center;
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.deadlines .calendar-side .card-body {
+  text-align: center;
+}
+
+.deadlines .calendar-side .card-body .deadline-message {
+  padding: .6em;
+  font-weight: 500;
+}
+
+.deadlines .calendar-side .card-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.deadlines .calendar-side .calendar-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.deadlines .calendar-side .calendar-buttons .btn-calendar {
+  border: 2px solid black;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+  color: black;
+  text-align: center;
+  margin: 1em;
+  padding: .2em;
+  width: 6em;
+  font-weight: 500;
+  border-radius: 2em;
+}
+
+.deadlines .calendar-side .calendar-buttons .btn-calendar:hover {
+  background-color: var(--my-red-color);
+  color: white;
+  border-color: white;
+}
+
+.title-underline {
+  background-color: black;
+  display: block;
+  height: 5px;
+  width: 100px;
+  margin: 0 0 1em 3.8em;
+}
+
+#separator-one {
+  background-color: gray;
+  position: absolute;
+  height: 2px;
+  width: 90%;
+  margin: 2em 3em 0 3em;
+}
+
+.courses {
+  background-color: #0e0d0d;
+  padding-top: 2em;
+  margin: 4em 0 0 0;
+}
+
+.courses .courses-title {
+  margin-left: 1.6em;
+  color: white;
+}
+
+.courses .course-description {
+  color: white;
+  margin-top: 2em;
+  padding-left: 2em;
+}
+
+.courses .course-description h3 {
+  font-size: 50px;
+}
+
+.courses .course-description h2 {
+  padding-bottom: 2em;
+}
+
+.courses .course-description .flip {
+  position: static;
+  padding-left: 5em;
+  margin-bottom: 2em;
+}
+
+.courses .course-overview {
+  margin-top: 4em;
+  padding: 0;
+}
+
+.courses .course-overview .d-block {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+  border-radius: 60em;
+  margin: 2em 0 0 26%;
+}
+
+.courses .carousel-caption {
+  text-align: right;
+}
+
+.courses .tutorial-courses {
+  font-weight: 200;
+}
+
+.courses .btn-explore-courses {
+  text-align: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: inline-block;
+  border: 2px white solid;
+  border-radius: 2em;
+  width: 6em;
+  font-weight: 500;
+  padding: .2em;
+  margin: 2em 0;
+}
+
+.courses .btn-explore-courses:hover {
+  color: black;
+  background-color: white !important;
+  -webkit-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+}
+
+.digital-notes {
+  padding-top: 2em;
+  margin-right: 0;
+}
+
+.digital-notes .title-diginotes {
+  padding-left: 4em;
+  color: black;
+}
+
+.digital-notes .img-digital-notes {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100vw;
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+  height: 100vw;
+  width: 100vw;
+  margin: 4em 0 6em -10%;
+}
+
+.digital-notes .new-feature-desc {
+  color: white;
+  width: 40%;
+  z-index: 100;
+  margin: -26em 0 0 14vw;
+}
+
+.digital-notes .new-feature-desc h2 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.digital-notes .new-feature-desc h3 {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 1em;
+}
+
+.digital-notes .btn-explore-feature {
+  border: 2px white solid;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 6em;
+  z-index: 101;
+  border-radius: 2em;
+  font-weight: 500;
+  margin-left: 10vw;
+  padding: .2em;
+}
+
+.digital-notes .btn-explore-feature:hover {
+  background-color: white;
+  color: black;
+}
+
+#separator-two {
+  background-color: gray;
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  margin: 2em 3em 0 3em;
+}
+/*# sourceMappingURL=home.css.map */

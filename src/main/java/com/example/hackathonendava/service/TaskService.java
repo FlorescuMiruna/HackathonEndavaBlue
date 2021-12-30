@@ -41,7 +41,7 @@ public class TaskService {
     }
 
     public Task saveTask(Task task) {
-
+        task.setStage("To do");
         return taskRepository.save(task);
     }
     public void deleteTask(Long id){
