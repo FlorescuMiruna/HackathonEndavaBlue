@@ -13,32 +13,21 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/task")
 public class TaskResponseController {
-
-
     private final TaskService taskService;
-
-
     @Autowired
     public TaskResponseController(TaskService taskService) {
         this.taskService = taskService;
     }
-
     @GetMapping("/demo")
     public Task getDemoTask(){
         return taskService.getDemoTask();
     }
-
-
-
-
     @GetMapping(value = "")
     public List<Task> getAllTasks() {
         return taskService.getAllTasks();
     }
-
     @PostMapping("")
     public Task saveTask( @RequestBody Task task) {
-
         task = taskService.saveTask(task);
         return task;
     }

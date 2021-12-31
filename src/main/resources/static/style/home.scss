@@ -61,7 +61,7 @@ body { margin: 0; }
     .dropdown-menu{
        a{
         color: rgb(78, 77, 77) !important;
-       } 
+       }
        .dropdown-item:hover{
         color: var(--main-color) !important;
         }
@@ -84,7 +84,7 @@ body { margin: 0; }
         outline: none;
     }
     .navbar-toggler{
-        border: none; outline: none !important; 
+        border: none; outline: none !important;
     }
     .navbar-toggler:focus
     {
@@ -180,7 +180,7 @@ body { margin: 0; }
             .btn-calendar{
                 border: 2px solid black;
                 transition: all .3s ease;
-                cursor: pointer;   
+                cursor: pointer;
                 color: black;
                 text-align: center;
                 margin: 1em; padding: .2em;
@@ -239,7 +239,7 @@ body { margin: 0; }
         padding: 0;
         .d-block{
             filter: brightness(.5);
-            border-radius: 60em; 
+            border-radius: 60em;
             margin: 2em 0 0 26%;
         }
     }
@@ -250,7 +250,7 @@ body { margin: 0; }
         font-weight: 200;
     }
     .btn-explore-courses{
-       
+
         text-align: center;
         cursor: pointer;
         justify-content: center;
@@ -317,7 +317,7 @@ body { margin: 0; }
     }
 }
 
-#separator-two{ 
+#separator-two{
     background-color: gray;
     position: absolute;
     width: 90%; height: 2px;

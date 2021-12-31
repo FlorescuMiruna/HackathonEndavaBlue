@@ -1,61 +1,73 @@
-body{
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #1f4d6b, #4b6e8f, #242c3e);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+body {
+	background: linear-gradient(-45deg, #7bb98c, #293d6c, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+	font-family: poppins;
 }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .main{
+	margin: auto;
 	width: 350px;
-	height: 500px;
-	background: red;
+	height: 90vh;
+	background-color: rgb(127, 185, 175,0.5);
 	overflow: hidden;
-	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
 }
-#chk{
-	display: none;
+label, input, button {
+	display: block;
+	width: 70%;
+	padding: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	font-size: 1.2em;
 }
-.signup{
-	position: relative;
-	width:100%;
-	height: 100%;
-}
+
 label{
-	color: #fff;
-	font-size: 2.3em;
+	color: #000;
+	font-size: 1em;
 	justify-content: center;
 	display: flex;
-	margin-top: 50px;
-	font-weight: bold;
+	margin-top: 5px;
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
 input{
-	width: 60%;
-	height: 20px;
-	background: #e0dede;
 	justify-content: center;
 	display: flex;
-	margin: 20px auto;
-	padding: 10px;
+	margin: 2px auto;
 	border: none;
 	outline: none;
-	border-radius: 5px;
+	background: #ecf0f3;
+	padding: 10px;
+	padding-left: 20px;
+	height: 30px;
+	border-radius: 50px;
+	box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 button{
 	width: 60%;
-	height: 40px;
-	margin: 10px auto;
+	height: 30px;
+	margin: 1px auto;
 	justify-content: center;
 	display: block;
 	color: #fff;
 	background: #112853;
-	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
 	outline: none;
@@ -65,26 +77,199 @@ button{
 	cursor: pointer;
 }
 button:hover{
-	background: #4456b8;
-}
-.login{
-	height: 460px;
-	background: #eee;
-	border-radius: 60% / 10%;
-	transform: translateY(-180px);
-	transition: .8s ease-in-out;
-}
-.login label{
-	color: #08318b;
-	transform: scale(.6);
+	background: #0d3c56;
 }
 
-#chk:checked ~ .login{
-	transform: translateY(-500px);
+/** PERSON */
+form{
+	--background: white;
+	--border: rgba(0, 0, 0, 0.125);
+	--borderDark: rgba(0, 0, 0, 0.25);
+	--borderDarker: rgba(0, 0, 0, 0.5);
+	--bgColorH: 0;
+	--bgColorS: 0%;
+	--bgColorL: 98%;
+	--fgColorH: 210;
+	--fgColorS: 50%;
+	--fgColorL: 38%;
+	--shadeDark: 0.3;
+	--shadeLight: 0.7;
+	--shadeNormal: 0.5;
+	--borderRadius: 0.125rem;
+	--highlight: #306090;
 }
-#chk:checked ~ .login label{
-	transform: scale(1);	
+figure {
+	--skinH: 30;
+	--skinS: 100%;
+	--skinL: 87%;
+	--hair: rgb(180,70,60);
+	background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), 95%);
+	border: 1px solid rgba(0,0,0,0.0625);
+	border-radius: 50%;
+	height: 0;
+	margin: auto auto;
+	margin-bottom: 2rem;
+	order: 1;
+	padding-top: 60%;
+	position: relative;
+	width: 60%;
+	overflow: hidden;
 }
-#chk:checked ~ .signup label{
-	transform: scale(.6);
+
+figure div {
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+figure .skin {
+	background: hsl(var(--skinH), var(--skinS), var(--skinL));
+	box-shadow: inset 0 0 3rem hsl(var(--skinH), var(--skinS), calc(var(--skinL) * 0.95));
+}
+
+figure .head {
+	top: 40%;
+	left: 50%;
+	width: 60%;
+	height: 60%;
+	border-radius: 100%;
+	box-shadow: 0 -0.175rem 0 0.125rem var(--hair);
+}
+
+figure  .ears {
+	top: 47%;
+	left: 50%;
+	white-space: nowrap;
+}
+
+figure .ears::before,
+figure .ears::after {
+	content: "";
+	background: hsl(var(--skinH), var(--skinS), var(--skinL));
+	border-radius: 50%;
+	width: 1rem;
+	height: 1rem;
+	display: inline-block;
+	margin: 0 2.1rem;
+}
+
+figure .head .eyes {
+	top: 55%;
+	left: 50%;
+	white-space: nowrap;
+}
+
+@-webkit-keyframes blink {
+	0%, 90%, 100% {
+		height: 10px;
+	}
+	95% {
+		height: 0;
+	}
+}
+
+@keyframes blink {
+	0%, 90%, 100% {
+		height: 10px;
+	}
+	95% {
+		height: 0px;
+	}
+}
+
+figure .head .eyes::before,
+figure .head .eyes::after {
+	content: "";
+	background: var(--borderDarker);
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	margin: 0 0.5rem;
+	-webkit-animation: blink 5s infinite;
+	animation: blink 5s infinite;
+	transition: all 0.15s;
+}
+
+input[name="show-password"]:checked ~ figure .head .eyes::before,
+input[name="show-password"]:checked ~ figure .head .eyes::after {
+	height: 0.125rem;
+	animation: none;
+}
+
+figure .head .mouth {
+	border: 0.125rem solid transparent;
+	border-bottom: 0.125rem solid var(--borderDarker);
+	width: 25%;
+	border-radius: 50%;
+	transition: all 0.5s
+}
+
+form:invalid figure .head .mouth {
+	top: 75%;
+	left: 50%;
+	height: 10%;
+}
+
+form:valid figure .head .mouth {
+	top: 60%;
+	left: 50%;
+	width: 40%;
+	height: 40%;
+}
+
+figure .hair {
+	top: 40%;
+	left: 50%;
+	width: 66.66%;
+	height: 66.66%;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+figure .hair::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: var(--hair);
+	border-radius: 50%;
+	top: -60%;
+	left: -50%;
+	box-shadow: 4rem 0 var(--hair);
+}
+
+figure .neck {
+	width: 10%;
+	height: 40%;
+	top: 62%;
+	left: 50%;
+	background: hsl(var(--skinH), var(--skinS), calc(var(--skinL) * 0.94));
+	border-radius: 0 0 2rem 2rem;
+	box-shadow: 0 0.25rem var(--border);
+}
+
+figure .person-body {
+	width: 60%;
+	height: 100%;
+	border-radius: 50%;
+	background: red;
+	left: 50%;
+	top: 126%;
+	background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+}
+
+figure .shirt-1,
+figure .shirt-2 {
+	width: 12%;
+	height: 7%;
+	background: hsl(var(--bgColorH), var(--bgColorS), var(--bgColorL));
+	top: 76%;
+	left: 36.5%;
+	transform: skew(-10deg) rotate(15deg)
+}
+
+figure .shirt-2 {
+	left: 52.5%;
+	transform: skew(10deg) rotate(-15deg)
 }

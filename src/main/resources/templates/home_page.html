@@ -14,12 +14,41 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style/home.css">
     <script src="/scripts/carousel.js"></script>
+    <script src="/scripts/navbar.js"></script>
     <link rel="stylesheet" href="/style/btn-flip.css">
 
     <title>Home</title>
 </head>
 
 <body>
+<!--<nav class="navbar navbar-light bg-light justify-content-between sticky-top" id="navbar">-->
+<!--    <div class="nav-left">-->
+<!--        <a id="home-text" class="nav-item" href="/home">Home</a>-->
+<!--        <a id="profile-text" class="nav-item" href="#">Profile</a>-->
+<!--        <a id="calendar-text" class="nav-item" href="#">Calendar</a>-->
+<!--        <a id="courses-text" class="nav-item" href="#">Courses</a>-->
+<!--        <a id="deadlines-text" class="nav-item" href="/deadlines">Deadlines</a>-->
+<!--        <a id="diginotes-text" class="nav-item" href="/notes">Digital Notes</a>-->
+<!--    </div>-->
+<!--    <div class="nav-center">-->
+<!--        <a href="/home"><img src="/images/logo-2.svg" id="logo"></a>-->
+<!--    </div>-->
+<!--    <div class="nav-right">-->
+
+<!--        <div id="mySidenav" class="sidenav">-->
+<!--            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+<!--            <a href="#" id="btnSignIn">Sign in</a>-->
+<!--            <a href="#" id="btnSignOut" onclick="signOut()" data-bs-toggle="modal"-->
+<!--               data-bs-target="#exampleModal2">Sign out</a>-->
+<!--            <a href="#" id="btnAbout">About us</a>-->
+<!--            <a href="#" id="btnContact">Contact</a>-->
+<!--        </div>-->
+<!--        <img src="/images/favorites.svg" id="favourites" class="nav-item">-->
+<!--        <img src="/images/search.svg" id="search" class="nav-item">-->
+
+<!--        <img src="/images/nav_prod.svg" id="hamburger" onclick="openNav()">-->
+<!--    </div>-->
+<!--</nav>-->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
         <div class="container-fluid">
@@ -44,16 +73,15 @@
                         <a class="nav-link" href="/notes">Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/deadlines">Deadlines</a>
+                        <a class="nav-link" href="/tasks">Deadlines</a>
                     </li>
                 </ul>
                 <div class="flip">
-                    <a href="#" target="_blank">
+                    <a href="/register">
                     <div class="front">SIGN IN</div>
                     <div class="back">SIGN IN</div>
                     </a>
                 </div>
-               
             </div>
         </div>
     </nav>

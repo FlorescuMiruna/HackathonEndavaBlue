@@ -16,25 +16,17 @@ import org.springframework.web.servlet.ModelAndView;
 //@RestController
 //@RequestMapping(value = "/task")
 public class TaskController {
-
-
     private final TaskService taskService;
-
     @Autowired
     public TaskController(TaskService taskService) {
         this.taskService = taskService;
     }
-
-
-
-
     @GetMapping({"/tasks"})
     public ModelAndView showAllTasks() {
         ModelAndView mav = new ModelAndView("list-tasks");
         mav.addObject("tasks", taskService.getAllTasks());
         return mav;
     }
-
     @GetMapping("/addTaskForm")
     public ModelAndView addTaskForm() {
         ModelAndView mav = new ModelAndView("add-task-form");
@@ -59,7 +51,4 @@ public class TaskController {
         taskService.deleteTask(taskId);
         return "redirect:/tasks";
     }
-
-
-
 }
