@@ -37,16 +37,20 @@
 
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#" id="btnSignIn">Sign in</a>
-            <a href="#" id="btnSignOut" onclick="signOut()" data-bs-toggle="modal"
-               data-bs-target="#exampleModal2">Sign out</a>
-            <a href="#" id="btnAbout">About us</a>
-            <a href="#" id="btnContact">Contact</a>
-        </div>
-        <img src="/media/favorites.svg" id="favourites" class="nav-item">
-        <img src="/media/search.svg" id="search" class="nav-item">
+            <a sec:authorize="isAnonymous()" href="/login_page" id="btnSignIn">Log in</a>
+            <a sec:authorize="isAnonymous()" href="/register" id="btnSignOut" >Register</a>
+            <a sec:authorize="isAuthenticated()" href="javascript: document.logoutForm.submit()" role="menuitem"> Logout</a>
 
-        <img src="/media/nav_prod.svg" id="hamburger" onclick="openNav()">
+            <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+                <input hidden type="submit" value="Sign Out"/>
+            </form>
+            <a href="#" >About us</a>
+            <a href="#" >Preferences</a>
+            <a href="#" id="btnContact">Contact</a>
+
+        </div>
+
+        <img src="/media/nav_prod.svg" id="hamburger" onclick="openNav()" style="filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(73deg) brightness(106%) contrast(109%);">
     </div>
 </nav>
 

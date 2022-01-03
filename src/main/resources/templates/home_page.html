@@ -38,14 +38,18 @@
 
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/register" id="btnSignIn">Sign in</a>
-            <a href="#" id="btnSignOut" onclick="signOut()" data-bs-toggle="modal"
-               data-bs-target="#exampleModal2">Sign out</a>
-            <a href="#" id="btnAbout">About us</a>
+            <a sec:authorize="isAnonymous()" href="/login_page" id="btnSignIn">Log in</a>
+            <a sec:authorize="isAnonymous()" href="/register" id="btnSignOut" >Register</a>
+            <a sec:authorize="isAuthenticated()" href="javascript: document.logoutForm.submit()" role="menuitem"> Logout</a>
+
+            <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+                <input hidden type="submit" value="Sign Out"/>
+            </form>
+            <a href="#" >About us</a>
+            <a href="#" >Preferences</a>
             <a href="#" id="btnContact">Contact</a>
+
         </div>
-        <img src="/media/favorites.svg" id="favourites" class="nav-item">
-        <img src="/media/search.svg" id="search" class="nav-item">
 
         <img src="/media/nav_prod.svg" id="hamburger" onclick="openNav()">
     </div>
@@ -213,7 +217,8 @@
                 <h1>Check out our new feature</h1>
                 <h2>Upload a photo with your writings</h2>
                 <h3>Transform it in document with a simple click</h3>
-                <div class="btn-explore-feature col-xs-12">Explore</div>
+                <a href="/notes" style="color: white"><div class="btn-explore-feature col-xs-12">Explore</div></a>
+
             </div>
 
 

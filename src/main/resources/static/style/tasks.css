@@ -92,7 +92,7 @@ body {
   -webkit-filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(338deg) brightness(200%) contrast(200%);
   filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(338deg) brightness(200%) contrast(200%);
   cursor: pointer;
-  display: none;
+  /*display: none;*/
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   -webkit-transition: -webkit-filter 0s;
@@ -365,7 +365,11 @@ body {
 
 .main-container .new-side .btn-new:hover {
   background-color: transparent;
-  color: white;
+  color: white !important;
+}
+.main-container .new-side .btn-new a:hover {
+  transition:all .35s ease-in-out;
+  color: white !important;
 }
 
 .main-container .new-side .hover-popup {
@@ -422,4 +426,3 @@ body {
     display: none;
   }
 }
-/*# sourceMappingURL=tasks.css.map */

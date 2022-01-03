@@ -54,6 +54,10 @@ body {
   color: #4e4d4d !important;
 }
 
+#hamburger{
+  filter: invert(100%) sepia(200%) saturate(7500%) hue-rotate(73deg) brightness(106%) contrast(109%) !important;
+}
+
 .navbar .dropdown-menu .dropdown-item:hover {
   /*color: var(--main-color) !important;*/
 }
