@@ -54,6 +54,22 @@ body {
   color: #4e4d4d !important;
 }
 
+.navbar .nav-right #switchAutism{
+  cursor: pointer;
+  height: 1.4em;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(73deg) brightness(150%) contrast(100%);
+  margin-top: 0px;
+}
+.navbar .nav-right .form-check-label{
+  margin-right: 2em;
+  color: black;
+  margin-top: 0px;
+}
+
+#hamburger{
+  filter: invert(100%) sepia(200%) saturate(7500%) hue-rotate(73deg) brightness(106%) contrast(109%) !important;
+}
+
 .navbar .dropdown-menu .dropdown-item:hover {
   /*color: var(--main-color) !important;*/
 }

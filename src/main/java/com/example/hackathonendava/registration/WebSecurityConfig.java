@@ -66,6 +66,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .usernameParameter("email")
                 .and()
                 .logout().permitAll()
+                //.logoutUrl("/logout")
                 .and()
                 .exceptionHandling().accessDeniedPage("/403")
         ;
