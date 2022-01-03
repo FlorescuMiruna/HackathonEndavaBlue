@@ -2,7 +2,7 @@ package com.example.hackathonendava.registration;
 
 import javax.sql.DataSource;
 
-import com.example.hackathonendava.registration.users.UserInfoService;
+//import com.example.hackathonendava.registration.users.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -49,19 +49,26 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
 
-        http.csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/users").authenticated()
-                .anyRequest().permitAll()
+        http.authorizeRequests()
+                .antMatchers("/deadlines").hasAnyAuthority("USER", "ADMIN")
+                .antMatchers("/management").hasAnyAuthority("ADMIN")
+                .antMatchers("/static/**", "/media/**", "/scripts/**", "/style/**").permitAll()
+                //.antMatchers("/edit/**").hasAnyAuthority("ADMIN", "EDITOR")
+                //.antMatchers("/delete/**").hasAuthority("ADMIN")
+                .antMatchers("/register").permitAll()
+                .antMatchers("/process_register").permitAll()
+                .antMatchers("/home").permitAll()
+                .anyRequest().authenticated()
                 .and()
-                .formLogin()
+                .formLogin().permitAll()
+                .loginPage("/login_page")
+                .loginProcessingUrl("/login")
                 .usernameParameter("email")
-                .defaultSuccessUrl("/users")
-                .permitAll()
                 .and()
-                .logout().logoutSuccessUrl("/").permitAll();
-
+                .logout().permitAll()
+                .and()
+                .exceptionHandling().accessDeniedPage("/403")
+        ;
     }
-
 
 }

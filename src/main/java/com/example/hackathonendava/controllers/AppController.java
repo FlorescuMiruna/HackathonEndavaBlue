@@ -1,9 +1,11 @@
 package com.example.hackathonendava.controllers;
 
-import com.example.hackathonendava.registration.users.User;
-import com.example.hackathonendava.registration.users.UserRepository;
+import com.example.hackathonendava.registration.User;
+import com.example.hackathonendava.registration.UserRepository;
 import com.example.hackathonendava.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,13 +18,16 @@ import java.util.List;
 @Controller
 public class AppController {
 
+    private String currentUser = "none";
+
     @Autowired
     private UserRepository userRepo;
     @Autowired
     private TaskRepository taskRepo;
 
+    private Authentication auth = SecurityContextHolder.getContext().getAuthentication();
     @GetMapping("")
-    public String viewHomePage() {
+    public String viewHomePage(User user) {
         return "home_page";
     }
 
@@ -32,7 +37,8 @@ public class AppController {
     }
 
     @GetMapping("/notes")
-    public String viewNotes() {
+    public String viewNotes(User user) {
+
         return "notes";
     }
 
@@ -57,7 +63,8 @@ public class AppController {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
-
+        System.out.println(user.getEmail());
+        user.setEnabled(true);
         userRepo.save(user);
 
         return "register_succes";
@@ -65,9 +72,10 @@ public class AppController {
 
     @GetMapping("/users")
     public String listUsers(Model model) {
-        List<User> listUsers = userRepo.findAll();
-        model.addAttribute("listUsers", listUsers);
-        return "users_list";
+        //List<User> listUsers = userRepo.findAll();
+        //model.addAttribute("listUsers", listUsers);
+        //return "users_list";
+        return null;
     }
 
 

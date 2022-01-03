@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -21,9 +21,8 @@
 
 <body>
 
-
-<nav class="navbar navbar-light bg-light justify-content-between sticky-top" id="navbar">
-    <div class="nav-left">
+<nav class="navbar navbar-light bg-light justify-content-between sticky-top" id="navbar" >
+    <div class="nav-left" >
         <a id="home-text" class="nav-item" href="/home">Home</a>
         <a id="profile-text" class="nav-item" href="#">Profile</a>
         <a id="calendar-text" class="nav-item" href="#">Calendar</a>
@@ -91,7 +90,7 @@
                 <h1 id="deadlines-title">D E A D L I N E S</h1>
                 <div class="title-underline"></div>
             </div>
-            
+
             <div class="tutorial-deadlines col-xs-12 col-sm-12 col-md-8">
                 <img src="/media/project_img_endava.jpg" class="img-deadlines" style="width: 400px;">
                 <div class="step" id="step1">
@@ -100,7 +99,7 @@
                         <span>Select Calendar from the navigation bar</span></h2>
                 </div>
                 <div class="step" id="step2">
-                    <h1>2</h1> 
+                    <h1>2</h1>
                     <h2>Click on ‘Add an activity’ <br>
                         <span>Complete the activity attributes, such
                         as: end-date, difficulty, <br> estimated time.</span></h2>
@@ -108,7 +107,7 @@
                 <div class="step" id="step3">
                     <h1>3</h1>
                     <h2>Press ‘Add’ <br>
-                        <span>Now your activity will be displayed on the 
+                        <span>Now your activity will be displayed on the
                         main page, as well <br> as in the deadlines
                         section.</span></h2>
                 </div>
@@ -126,15 +125,15 @@
                     <div class="btn-calendar">Previous</div>
                     <div class="btn-calendar">Next</div>
                   </div>
-                
+
             </div>
-            
+
         </div>
         <div id="separator-one"></div>
 
 
         <div class="courses row">
-            
+
             <div class="title-courses col-xs-12">
                 <h1 class="courses-title">C O U R S E S</h1>
                 <div class="title-underline"></div>
@@ -143,7 +142,7 @@
             <div class="course-description col-xs-12 col-md-4">
                 <h3 class="course-tutorial">Explore courses in your library
                 </h3> <br>
-                <h2 class="tutorial-courses"> You can slide through the main courses in your 
+                <h2 class="tutorial-courses"> You can slide through the main courses in your
                     library and access each by clicking the corresponding header
                     title
                 </h2>
@@ -216,7 +215,7 @@
                 <div class="btn-explore-feature col-xs-12">Explore</div>
             </div>
 
-            
+
         </div>
 
         <div id="separator-two"></div>
