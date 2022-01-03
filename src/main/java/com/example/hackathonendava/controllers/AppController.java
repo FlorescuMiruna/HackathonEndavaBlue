@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 //import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -37,10 +38,12 @@ public class AppController {
     }
 
     @GetMapping("/notes")
-    public String viewNotes(User user) {
+    public String viewNotes() {
 
         return "notes";
     }
+
+
 
     @GetMapping("/deadlines")
     public String viewDeadlines() {
@@ -70,12 +73,12 @@ public class AppController {
         return "register_succes";
     }
 
-    @GetMapping("/users")
-    public String listUsers(Model model) {
-        //List<User> listUsers = userRepo.findAll();
-        //model.addAttribute("listUsers", listUsers);
-        //return "users_list";
-        return null;
+    @GetMapping({"/management"})
+    public ModelAndView listUsers() {
+        ModelAndView mav = new ModelAndView("management");
+        mav.addObject("listUsers", (List<User>) userRepo.findAll());
+        return mav;
+
     }
 
 
