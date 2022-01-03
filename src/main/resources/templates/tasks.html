@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" id="entire-html">
+<html lang="en" id="entire-html" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +29,7 @@
         <a id="courses-text" class="nav-item" href="#">Courses</a>
         <a id="deadlines-text" class="nav-item" href="/tasks">Deadlines</a>
         <a id="diginotes-text" class="nav-item" href="/notes">Digital Notes</a>
+        <a sec:authorize="hasAnyAuthority('ADMIN')" id="management-text" class="nav-item" href="/management">Management</a>
     </div>
     <div class="nav-center">
         <a href="/home"><img src="/media/logo-2.svg" id="logo"></a>
@@ -87,14 +89,14 @@
             <div class="hover-popup" id="hoverpopup">
                 <img src="/media/Frame 32.png" id="circle-new">
                 <div class="textbox" id="textbox">
-                    <h1>You can always add a new task by clicking the following 
+                    <h1>You can always add a new task by clicking the following
                         button</h1>
                         <div class="btn-new" id="btn-new">
                             <a href="/addTaskForm">New</a></div>
                 </div>
-                
+
             </div>
-            
+
         </div>
     </div>
 <script>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,6 +28,7 @@
         <a id="courses-text" class="nav-item" href="#">Courses</a>
         <a id="deadlines-text" class="nav-item" href="/tasks">Deadlines</a>
         <a id="diginotes-text" class="nav-item" href="/notes">Digital Notes</a>
+        <a sec:authorize="hasAnyAuthority('ADMIN')" id="management-text" class="nav-item" href="/management">Management</a>
     </div>
     <div class="nav-center">
         <a href="/home"><img src="/media/logo-2.svg" id="logo"></a>
