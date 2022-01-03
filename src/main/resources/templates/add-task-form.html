@@ -38,6 +38,7 @@
         </div>
         <hr/>
         <div class="col-12"><a th:href="@{/tasks}" class="butonel">Back to list</a> </div>
+        <input type="hidden" th:field="*{id}" />
     </form>
 
 
@@ -45,3 +46,41 @@
 
 </body>
 </html>
+
+
+<!--******************************************************************************-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<head>-->
+<!--    <title>Task form</title>-->
+
+<!--    <link rel="stylesheet"-->
+<!--          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"-->
+<!--          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"-->
+<!--          crossorigin="anonymous" />-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="container">-->
+
+<!--    &lt;!&ndash;    <h3>Add New Task</h3>&ndash;&gt;-->
+<!--    <hr/>-->
+
+<!--    <form th:action="@{/saveTask}" th:object="${task}" method="POST">-->
+
+<!--        <input type="text" th:field="*{name}" class="form-control col-4 mb-4" placeholder="Enter Name" />-->
+
+<!--        <input type="text" th:field="*{description}" class="form-control col-4 mb-4" placeholder="Enter Description" />-->
+
+<!--        <input type="date" th:field="*{deadline}" class="form-control col-4 mb-4" placeholder="Enter deadline" />-->
+<!--        &lt;!&ndash;        <input type="text" th:field="*{stage}" class="form-control col-4 mb-4" placeholder="Enter stage" />&ndash;&gt;-->
+<!--        <button type="submit" class="btn btn-primary col-2">Save</button>-->
+<!--        <input type="hidden" th:field="*{id}" />-->
+
+<!--    </form>-->
+<!--    <hr/>-->
+<!--    <a th:href="@{/tasks}">Back to list</a>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
